@@ -46,7 +46,17 @@ function renderTable() {
   } else if (filterMode === "pending") {
     filteredTasks = tasks.filter(t => t.status === "pending");
   }
-
+  // 🔹 EMPTY STATE
+  if (filteredTasks.length === 0) {
+    tableBody.innerHTML = `
+      <tr>
+        <td colspan="4" class="text-center py-6 text-slate-400 italic">
+          No task found
+        </td>
+      </tr>
+    `;
+    return;
+  }
   // tampilkan setiap task
   filteredTasks.forEach(task => {
     const row = document.createElement("tr");
