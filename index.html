@@ -7,18 +7,22 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
   </head>
-  <body class="min-h-screen bg-gray-400 flex flex-col items-center p-8">
-    <header class="text-3xl font-bold mb-6">
+  <body
+    class="min-h-screen bg-gradient-to-br from-slate-100 to-slate-300 flex flex-col items-center p-8"
+  >
+    <header
+      class="text-3xl font-bold mb-8 text-slate-700 flex item-center gap-3"
+    >
       <h1>TO DO LIST</h1>
     </header>
     <!-- input data  -->
-    <section class="w-full max-w-xl bg-white shadow-md rounded-xl p6 mb-4">
+    <section class="w-full max-w-xl bg-white shadow-md rounded-2xl p-6 mb-6">
       <div class="grid grid-cols-3 gap-4 mb-4">
         <input
           type="text"
           id="taskInput"
-          class="border rounded-lg p-2 col-span-1 focus:ring-2 focus:ring-blue-400"
-          placeholder="input here"
+          class="border border-slate-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-400"
+          placeholder="add new Task"
         />
 
         <!-- input tanggal -->
@@ -26,13 +30,13 @@
         <input
           type="date"
           id="dateInput"
-          class="border-rouded-lg p-2 col-span-1 focus:ring-2 focus:ring-blue-400"
+          class="border border-slate-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-400"
         />
 
         <!-- BUTTON ADD -->
         <button
           id="addBtn"
-          class="bg-blue-600 text-white font-semibold p-2 rounded-lg col-span-1 hover:bg-blue-700"
+          class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-700 active:scale-95"
         >
           ADD
         </button>
@@ -43,13 +47,13 @@
       <div class="flex justify-between">
         <button
           id="filterBtn"
-          class="bg-gray-300 px-4 py-2 rounded-lg hover:bg-gray-400 transition"
+          class="bg-slate-500 text-slate-100 px-4 py-2 rounded-lg hover:bg-slate-300 transition"
         >
           Filter
         </button>
         <button
           id="deleteBtn"
-          class="bg-red-500 px-4 py-2 rounded-lg hover:bg-red-600 transition"
+          class="bg-red-500 px-4 py-2 rounded-lg hover:bg-red-600 transition text-white"
         >
           Delete
         </button>
@@ -58,9 +62,9 @@
     <!-- bottom -->
     <br />
     <section class="w-full bg-white shadow-md rounded-xl p-6">
-      <table class="w-full border-collapse">
+      <table class="w-full border-separate border-spacing-y-2">
         <thead>
-          <tr class="bg-gray-200">
+          <tr class="bg-gray-200 shadow rounded-lg">
             <th class="border p-2 text-left">TASK</th>
             <th class="border p-2 text-left">Due Date</th>
             <th class="border p-2 text-left">Status</th>
@@ -70,8 +74,8 @@
         <tbody id="taskTable" class="bg-white"></tbody>
       </table>
     </section>
-    <footer class="mt-6 text-teal-300 font-semibold">
-      Build by Aditya Juliawan
+    <footer class="mt-10 text-slate-500 text-sm">
+      © 2025 • Built by Aditya Juliawan
     </footer>
     <script src="js/script.js"></script>
   </body>
